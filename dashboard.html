@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadre War-Room Portal | Member Dashboard | CAPITANISSM</title>
+  <meta name="description" content="Internal operations portal for Capitanissm Prime Members, speech analysts, and MLA consultants.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              deep: '#07160f',
+              forest: '#0f2d20',
+              emerald: '#10b981',
+              bright: '#34d399',
+              coral: '#ff5252',
+              gold: '#f59e0b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen text-slate-100 warroom-grid relative">
+
+  <!-- TOP TICKER -->
+  <div class="bg-gradient-to-r from-emerald-950 via-forest to-emerald-950 border-b border-emerald-500/30 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="text-emerald-300 font-bold uppercase text-[10px]">Secure Internal Portal</span>
+        <span class="text-slate-300">Live Cadre War-Room Workspace • End-to-End Encrypted Session</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-300 text-[11px]">
+        <span class="text-amber-300 font-mono">CADRE ID: CPT-2026-8941</span>
+        <span class="text-slate-500">|</span>
+        <a href="index.html" class="text-slate-400 hover:text-white">Exit Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#07160f]/90 backdrop-blur-xl border-b border-emerald-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-emerald-400/80 shadow-[0_0_15px_rgba(16,185,129,0.3)] group-hover:scale-105 transition-transform">
+          <img src="assets/logo.jpg" alt="Capitanissm Logo" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-black tracking-wider text-white font-heading group-hover:text-emerald-300 transition-colors">
+            CAPITANISSM
+          </span>
+          <span class="block text-[10px] font-bold text-emerald-400/90 tracking-widest uppercase">
+            Internal Operations Portal
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold tracking-wide uppercase text-slate-300">
+        <a href="index.html" class="hover:text-emerald-400 transition-colors">Home</a>
+        <a href="speeches.html" class="hover:text-emerald-400 transition-colors">Speeches Data</a>
+        <a href="booth-intelligence.html" class="hover:text-emerald-400 transition-colors">Booth Intelligence</a>
+        <a href="software-suite.html" class="hover:text-emerald-400 transition-colors">Custom Software</a>
+        <a href="mla-consulting.html" class="hover:text-emerald-400 transition-colors text-amber-300">MLA Consulting</a>
+        <a href="prime-members.html" class="hover:text-emerald-400 transition-colors">UPSC / WBCS Cadre</a>
+        <a href="dashboard.html" class="nav-link-active transition-colors">Cadre Portal</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-black/40 border border-emerald-400/30 text-xs">
+          <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold text-[10px]">
+            SM
+          </div>
+          <span class="hidden sm:inline font-bold text-slate-200">Soumya M.</span>
+          <span class="px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 text-[9px] font-bold">WBCS CADRE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DASHBOARD OVERVIEW -->
+  <section class="py-8 sm:py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <!-- Welcome & Constituency Pill -->
+      <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-emerald-500/30 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-1">
+            ★ Verified Prime Scholar Workspace
+          </span>
+          <h1 class="text-2xl sm:text-3xl font-black text-white font-heading">
+            Welcome back, Soumya Mukherjee
+          </h1>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">
+            Assigned War-Room: <strong class="text-emerald-300">142 - Diamond Harbor AC</strong> • MLA Candidate: <strong class="text-white">Hon'ble A. Sengupta</strong>
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <button onclick="showToast('Candidate Briefing PDF generated & downloaded!')" class="btn-primary-green px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Export MLA Daily Briefing</span>
+          </button>
+          <a href="speeches.html" class="btn-glass px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5">
+            <i class="fa-solid fa-microphone-lines text-emerald-400"></i>
+            <span>Speech Vault</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Metrics Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-5 rounded-2xl stat-card-gradient space-y-2">
+          <span class="text-xs font-bold text-slate-400 uppercase">Assigned Polling Booths</span>
+          <div class="flex items-baseline justify-between">
+            <span class="text-2xl sm:text-3xl font-black text-white font-mono">12 Booths</span>
+            <span class="text-xs text-emerald-400 font-bold">100% Mapped</span>
+          </div>
+          <span class="text-[11px] text-slate-400 block">Booths #101 to #112 active</span>
+        </div>
+
+        <div class="p-5 rounded-2xl stat-card-gradient space-y-2">
+          <span class="text-xs font-bold text-slate-400 uppercase">Speeches Drafted</span>
+          <div class="flex items-baseline justify-between">
+            <span class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">14 Scripts</span>
+            <span class="text-xs text-amber-400 font-bold">96% Approved</span>
+          </div>
+          <span class="text-[11px] text-slate-400 block">Next rally: Tomorrow 4:00 PM</span>
+        </div>
+
+        <div class="p-5 rounded-2xl stat-card-gradient space-y-2">
+          <span class="text-xs font-bold text-slate-400 uppercase">Grievance Tickets Solved</span>
+          <div class="flex items-baseline justify-between">
+            <span class="text-2xl sm:text-3xl font-black text-amber-300 font-mono">38 Solved</span>
+            <span class="text-xs text-emerald-400 font-bold">4 Pending</span>
+          </div>
+          <span class="text-[11px] text-slate-400 block">Drinking water & power feeder issues</span>
+        </div>
+
+        <div class="p-5 rounded-2xl stat-card-gradient space-y-2 border-emerald-500/40">
+          <span class="text-xs font-bold text-slate-400 uppercase">Scholar Honorarium</span>
+          <div class="flex items-baseline justify-between">
+            <span class="text-2xl sm:text-3xl font-black text-emerald-300 font-mono">₹28,500</span>
+            <span class="text-xs text-emerald-400 font-bold">Credited</span>
+          </div>
+          <span class="text-[11px] text-slate-400 block">Cycle: Oct 2026 • Verified</span>
+        </div>
+
+      </div>
+
+      <!-- Active Operations Layout: Tasks & Ground Feeds -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Column: Assigned Strategic Tasks -->
+        <div class="lg:col-span-8 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-list-check text-emerald-400"></i>
+              <span>Active War-Room Task Queue</span>
+            </h3>
+            <span class="text-xs font-mono text-slate-400">3 Priority Items</span>
+          </div>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            
+            <div class="glass-panel p-4 rounded-2xl border border-rose-500/30 flex items-start justify-between gap-4">
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 text-[10px] font-bold uppercase">Urgent • Stage Prep</span>
+                  <span class="text-slate-400 text-xs">Due Today, 5:00 PM</span>
+                </div>
+                <strong class="text-white block font-semibold text-sm">
+                  Draft Opposition Counter on Hospital Doctor Shortage (Ward 6)
+                </strong>
+                <p class="text-slate-300 text-xs">
+                  Opposition party distributed pamphlets alleging 70% doctor vacancies. Cross-verify with latest CMOH RTI data and draft 3 counter-punchlines for candidate speech.
+                </p>
+              </div>
+              <button onclick="showToast('Drafting tool opened!')" class="btn-primary-green px-3 py-1.5 rounded-lg text-xs font-bold flex-shrink-0">
+                Draft Script
+              </button>
+            </div>
+
+            <div class="glass-panel p-4 rounded-2xl border border-amber-500/30 flex items-start justify-between gap-4">
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-bold uppercase">Booth Intelligence</span>
+                  <span class="text-slate-400 text-xs">Due Tomorrow, 11:00 AM</span>
+                </div>
+                <strong class="text-white block font-semibold text-sm">
+                  Audit Panna Pramukh Coverage for Booth #104 (North High School)
+                </strong>
+                <p class="text-slate-300 text-xs">
+                  Verify contact phone numbers for 9 appointed Panna Pramukhs and ensure voter slips are distributed to 120 flood-affected households.
+                </p>
+              </div>
+              <button onclick="showToast('Booth records updated!')" class="btn-glass px-3 py-1.5 rounded-lg text-xs font-bold flex-shrink-0">
+                Review Booth
+              </button>
+            </div>
+
+            <div class="glass-panel p-4 rounded-2xl border border-emerald-500/30 flex items-start justify-between gap-4 opacity-85">
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold uppercase">Completed</span>
+                  <span class="text-slate-400 text-xs">Yesterday, 8:30 PM</span>
+                </div>
+                <strong class="text-slate-300 block font-semibold text-sm">
+                  Constituency Cold Storage Audit & Mandi Disparity Report
+                </strong>
+                <p class="text-slate-400 text-xs">
+                  Submitted full 4-page briefing to MLA Campaign Manager. Cited in major rally with 98% positive crowd sentiment.
+                </p>
+              </div>
+              <span class="text-emerald-400 text-lg"><i class="fa-solid fa-circle-check"></i></span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Quick Software Actions & Field Log -->
+        <div class="lg:col-span-4 space-y-5">
+          
+          <div class="glass-panel p-5 rounded-2xl border border-emerald-500/30 space-y-3">
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick War-Room Actions</h4>
+            
+            <button onclick="showToast('Opening Speech Synthesis Module...')" class="w-full text-left p-2.5 rounded-xl bg-black/40 hover:bg-emerald-500/10 border border-white/5 flex items-center justify-between text-xs text-slate-200 transition-all">
+              <span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-emerald-400"></i> New Speech Punchline</span>
+              <i class="fa-solid fa-chevron-right text-slate-500 text-[10px]"></i>
+            </button>
+
+            <button onclick="showToast('Opening Grievance Dispatch Ticket...')" class="w-full text-left p-2.5 rounded-xl bg-black/40 hover:bg-emerald-500/10 border border-white/5 flex items-center justify-between text-xs text-slate-200 transition-all">
+              <span class="flex items-center gap-2"><i class="fa-solid fa-ticket text-amber-400"></i> Log Booth Grievance</span>
+              <i class="fa-solid fa-chevron-right text-slate-500 text-[10px]"></i>
+            </button>
+
+            <button onclick="showToast('Broadcaster ready for deployment!')" class="w-full text-left p-2.5 rounded-xl bg-black/40 hover:bg-emerald-500/10 border border-white/5 flex items-center justify-between text-xs text-slate-200 transition-all">
+              <span class="flex items-center gap-2"><i class="fa-solid fa-bullhorn text-rose-400"></i> Cadre WhatsApp Sync</span>
+              <i class="fa-solid fa-chevron-right text-slate-500 text-[10px]"></i>
+            </button>
+          </div>
+
+          <div class="glass-panel p-5 rounded-2xl border border-white/5 space-y-3">
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider flex items-center justify-between">
+              <span>Candidate Schedule</span>
+              <span class="text-[10px] text-emerald-400 font-mono">Today</span>
+            </h4>
+            <div class="space-y-2 text-xs text-slate-300">
+              <div class="p-2 rounded-lg bg-black/30">
+                <span class="text-amber-400 font-bold block text-[11px]">3:00 PM - 4:15 PM</span>
+                <span>Panchayat Hall Door-to-Door Meeting (Booth 102)</span>
+              </div>
+              <div class="p-2 rounded-lg bg-black/30">
+                <span class="text-rose-400 font-bold block text-[11px]">5:30 PM - 7:00 PM</span>
+                <span>Main Market Public Rally & Speech Delivery</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#05110b] border-t border-emerald-500/20 py-8 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="assets/logo.jpg" alt="Logo" class="w-6 h-6 rounded-full border border-emerald-400">
+        <span class="font-bold text-white font-heading">CAPITANISSM PORTAL</span>
+        <span class="text-slate-500">| Session Encrypted</span>
+      </div>
+      <div>
+        Logged in as Soumya Mukherjee • WBCS Prime Scholar Cadre
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Political Campaign Software Suite | CAPITANISSM</title>
+  <meta name="description" content="Explore Capitanissm's proprietary election software: BoothPulse CRM, VaniRhetoric Teleprompter, WarRoom Sentinel, and CadreSync.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              deep: '#07160f',
+              forest: '#0f2d20',
+              emerald: '#10b981',
+              bright: '#34d399',
+              coral: '#ff5252',
+              gold: '#f59e0b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen text-slate-100 warroom-grid relative">
+
+  <!-- TOP TICKER -->
+  <div class="bg-gradient-to-r from-emerald-950 via-forest to-emerald-950 border-b border-emerald-500/30 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-400/40 text-[10px] tracking-wide uppercase">Software Lab</span>
+        <span class="text-slate-300">Custom Built for Indian Assembly Constituencies • Zero Data Leaks</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300 text-[11px]">
+        <a href="apply.html" class="text-emerald-400 hover:text-emerald-300 font-bold">Join as Software Developer (18+)</a>
+        <a href="mla-consulting.html" class="text-amber-300 hover:text-amber-200">Request Software License</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#07160f]/90 backdrop-blur-xl border-b border-emerald-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-emerald-400/80 shadow-[0_0_15px_rgba(16,185,129,0.3)] group-hover:scale-105 transition-transform">
+          <img src="assets/logo.jpg" alt="Capitanissm Logo" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-black tracking-wider text-white font-heading group-hover:text-emerald-300 transition-colors">
+            CAPITANISSM
+          </span>
+          <span class="block text-[10px] font-bold text-emerald-400/90 tracking-widest uppercase">
+            Political Intelligence & War-Rooms
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold tracking-wide uppercase text-slate-300">
+        <a href="index.html" class="hover:text-emerald-400 transition-colors">Home</a>
+        <a href="speeches.html" class="hover:text-emerald-400 transition-colors">Speeches Data</a>
+        <a href="booth-intelligence.html" class="hover:text-emerald-400 transition-colors">Booth Intelligence</a>
+        <a href="software-suite.html" class="nav-link-active transition-colors">Custom Software</a>
+        <a href="mla-consulting.html" class="hover:text-emerald-400 transition-colors text-amber-300">MLA Consulting</a>
+        <a href="prime-members.html" class="hover:text-emerald-400 transition-colors">UPSC / WBCS Cadre</a>
+        <a href="dashboard.html" class="hover:text-emerald-400 transition-colors">Cadre Portal</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="apply.html" class="btn-primary-green px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-bold flex items-center gap-2">
+          <i class="fa-solid fa-user-plus"></i>
+          <span>Apply (18+)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="py-12 sm:py-16 relative overflow-hidden border-b border-emerald-500/20 bg-gradient-to-b from-[#0a2318] to-[#07160f]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <span class="text-xs font-bold text-emerald-400 tracking-widest uppercase px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/30">
+          Campaign Operating System
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-black text-white mt-3 font-heading leading-tight">
+          Custom Political Campaign Software Suite
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+          Generic spreadsheets and foreign marketing CRMs fall apart on polling day. We engineer purpose-built software architectures tuned strictly for Indian election booths, candidates, and cadres.
+        </p>
+      </div>
+
+      <!-- Quick Software Modules Selector -->
+      <div class="flex flex-wrap items-center gap-3 mt-8 pt-6 border-t border-white/10">
+        <a href="#simulator-crm" class="px-4 py-2 rounded-xl bg-white/5 border border-emerald-400/30 text-xs font-bold text-slate-200 hover:bg-emerald-500/20 hover:text-emerald-300 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-users text-emerald-400"></i>
+          <span>1. BoothPulse CRM™</span>
+        </a>
+        <a href="#simulator-teleprompter" class="px-4 py-2 rounded-xl bg-white/5 border border-emerald-400/30 text-xs font-bold text-slate-200 hover:bg-emerald-500/20 hover:text-emerald-300 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-microphone text-emerald-400"></i>
+          <span>2. VaniRhetoric Teleprompter™</span>
+        </a>
+        <a href="#simulator-warroom" class="px-4 py-2 rounded-xl bg-white/5 border border-emerald-400/30 text-xs font-bold text-slate-200 hover:bg-emerald-500/20 hover:text-emerald-300 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-tower-broadcast text-emerald-400"></i>
+          <span>3. WarRoom Sentinel™</span>
+        </a>
+        <a href="#simulator-broadcast" class="px-4 py-2 rounded-xl bg-white/5 border border-emerald-400/30 text-xs font-bold text-slate-200 hover:bg-emerald-500/20 hover:text-emerald-300 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-comments text-emerald-400"></i>
+          <span>4. CadreSync Broadcaster™</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFTWARE 1: BOOTHPULSE CRM SIMULATOR -->
+  <section id="simulator-crm" class="py-16 border-b border-emerald-500/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Module 01 • Micro-Voter Operations</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1 font-heading">BoothPulse CRM™ Interactive Simulator</h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-1">Live demo of our household voter clustering and grievance resolution registry.</p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input type="text" id="crm-search-filter" placeholder="Filter voter or grievance..." class="form-input-custom px-3 py-1.5 rounded-lg text-xs">
+          <select id="crm-booth-filter" class="form-input-custom px-3 py-1.5 rounded-lg text-xs">
+            <option value="all">All Booths</option>
+            <option value="101">Booth 101</option>
+            <option value="102">Booth 102</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-2xl border border-emerald-500/30 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left warroom-table">
+            <thead>
+              <tr>
+                <th>Voter ID / Epic</th>
+                <th>Voter & Family Head</th>
+                <th>Age & Gender</th>
+                <th>Booth #</th>
+                <th>Grievance Ticket</th>
+                <th>Outreach Priority</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="crm-table-body">
+              <tr>
+                <td class="font-mono text-emerald-400 font-bold">WB/04/142/00841</td>
+                <td>
+                  <strong class="text-white block">Subrata Roy</strong>
+                  <span class="text-[11px] text-slate-400">Head of Household (4 Voters)</span>
+                </td>
+                <td>46 / Male</td>
+                <td class="font-mono">Booth 101</td>
+                <td><span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-xs">Delayed KCC Loan Renewal</span></td>
+                <td><span class="text-rose-400 font-bold flex items-center gap-1"><i class="fa-solid fa-fire"></i> High Swing</span></td>
+                <td><span class="text-emerald-400 text-xs font-semibold">Visited by Panna Pramukh</span></td>
+              </tr>
+              <tr>
+                <td class="font-mono text-emerald-400 font-bold">WB/04/142/00842</td>
+                <td>
+                  <strong class="text-white block">Priya Roy</strong>
+                  <span class="text-[11px] text-slate-400">Daughter • 1st Time Voter</span>
+                </td>
+                <td>19 / Female</td>
+                <td class="font-mono">Booth 101</td>
+                <td><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-xs">College Bus Route Shortage</span></td>
+                <td><span class="text-amber-400 font-bold flex items-center gap-1"><i class="fa-solid fa-bolt"></i> Youth Category</span></td>
+                <td><span class="text-emerald-400 text-xs font-semibold">Manifesto Flyer Delivered</span></td>
+              </tr>
+              <tr>
+                <td class="font-mono text-emerald-400 font-bold">WB/04/142/00912</td>
+                <td>
+                  <strong class="text-white block">Mohammad Alimuddin</strong>
+                  <span class="text-[11px] text-slate-400">Shopkeeper's Union Rep</span>
+                </td>
+                <td>52 / Male</td>
+                <td class="font-mono">Booth 102</td>
+                <td><span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 text-xs">Drainage Waterlogging at Market</span></td>
+                <td><span class="text-rose-400 font-bold flex items-center gap-1"><i class="fa-solid fa-fire"></i> Influencer</span></td>
+                <td><span class="text-amber-300 text-xs font-semibold">Candidate Personal Call Sched.</span></td>
+              </tr>
+              <tr>
+                <td class="font-mono text-emerald-400 font-bold">WB/04/142/00945</td>
+                <td>
+                  <strong class="text-white block">Aparna Sen</strong>
+                  <span class="text-[11px] text-slate-400">Self Help Group Coordinator</span>
+                </td>
+                <td>38 / Female</td>
+                <td class="font-mono">Booth 102</td>
+                <td><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 text-xs">Anganwadi Ration Quality</span></td>
+                <td><span class="text-emerald-400 font-bold flex items-center gap-1"><i class="fa-solid fa-check"></i> Committed</span></td>
+                <td><span class="text-emerald-400 text-xs font-semibold">Women Wing Team Lead</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOFTWARE 2: VANIRHETORIC TELEPROMPTER SIMULATOR -->
+  <section id="simulator-teleprompter" class="py-16 border-b border-emerald-500/10 bg-[#07160f]/60">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Module 02 • Stage & Media</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1 font-heading">VaniRhetoric Teleprompter™ Live Demo</h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-1">Experience how candidates read real-time speech scripts on stage with auto-scroll and fact-checked punchlines.</p>
+      </div>
+
+      <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-emerald-500/40 space-y-4">
+        
+        <!-- Teleprompter Controls -->
+        <div class="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-xl bg-black/60 border border-white/5 text-xs">
+          <div class="flex items-center gap-2">
+            <button id="tp-play-pause-btn" class="btn-primary-green px-4 py-2 rounded-lg font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-play"></i>
+              <span>Start Auto-Scroll</span>
+            </button>
+            <button id="tp-reset-btn" class="btn-glass px-3 py-2 rounded-lg font-bold">
+              <i class="fa-solid fa-rotate-left"></i> Reset
+            </button>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+              <span class="text-slate-400">Scroll Speed:</span>
+              <input type="range" id="tp-speed-range" min="1" max="5" value="2" class="w-24 accent-emerald-400">
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-slate-400">Font Size:</span>
+              <button id="tp-font-dec" class="px-2 py-1 rounded bg-white/5 border border-white/10 text-white">-</button>
+              <button id="tp-font-inc" class="px-2 py-1 rounded bg-white/5 border border-white/10 text-white">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Teleprompter Visual Screen -->
+        <div id="teleprompter-box" class="teleprompter-screen p-6 sm:p-8 rounded-2xl text-lg sm:text-xl font-medium space-y-6">
+          <p class="text-amber-300 font-bold uppercase tracking-wider text-sm border-b border-amber-400/30 pb-2">
+            [STAGE DIRECTION: PAUSE FOR APPLAUSE • MAKE EYE CONTACT WITH NORTH BLOCK CROWD]
+          </p>
+
+          <p class="text-white">
+            "My brothers, mothers, and the young leaders of this historic constituency! Today, I do not come with empty political banners; I come holding the audited balance sheet of your MLA LAD funds!"
+          </p>
+
+          <p class="text-emerald-300 font-semibold">
+            "They tell you that ₹18 Crores were spent on drainage in Ward 4 and Ward 7. Ask them why our children still wade through knee-deep water every monsoon to reach the high school!"
+          </p>
+
+          <p class="text-white">
+            "A farmer does not ask for charity; he asks for the true value of the sweat he deposits into our soil. The mandi opens at 6 AM, but the official procurement weigh-scale is locked till afternoon so private brokers can buy at a ₹400 discount."
+          </p>
+
+          <p class="text-rose-300 font-bold">
+            "This syndicate of commissions ends on the evening of the counting day! Remember every closed health clinic, every paper leak, and cast your vote booth by booth for dignified governance!"
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOFTWARE 3: WARROOM SENTINEL & BROADCASTER -->
+  <section id="simulator-warroom" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- WarRoom Sentinel -->
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-emerald-500/30 space-y-5">
+          <div class="flex items-center justify-between border-b border-white/10 pb-3">
+            <div>
+              <span class="text-xs font-mono font-bold text-rose-400 uppercase">Module 03 • D-Day Command</span>
+              <h3 class="text-xl font-bold text-white mt-1">WarRoom Sentinel™ (Polling Day)</h3>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-rose-500/20 text-rose-300 text-xs font-bold animate-pulse flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-rose-500"></span> Live 2:45 PM Status
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-black/40 border border-white/5">
+              <span class="text-slate-400 block">Total Booths Monitored</span>
+              <span class="text-lg font-bold text-white font-mono">186 / 186 Active</span>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border border-white/5">
+              <span class="text-slate-400 block">Constituency Turnout Est.</span>
+              <span class="text-lg font-bold text-emerald-400 font-mono">68.4% (Target: 78%)</span>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <span class="font-bold text-slate-300 uppercase block">Active Incidents / Alerts:</span>
+            <div class="p-3 rounded-xl bg-rose-950/40 border border-rose-500/30 flex items-start gap-2.5">
+              <i class="fa-solid fa-triangle-exclamation text-rose-400 mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Booth 104 - EVM Button Jamming Complaint</strong>
+                <span class="text-slate-300 text-[11px]">Polling agent filed Form 17C objection. Legal response team dispatched (ETA: 8 mins).</span>
+              </div>
+            </div>
+            <div class="p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Booth 102 - Senior Citizen Transport Dispatch</strong>
+                <span class="text-slate-300 text-[11px]">42 elderly voters safely assisted to voting booth by volunteer youth squad.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CadreSync Broadcaster -->
+        <div id="simulator-broadcast" class="glass-panel p-6 sm:p-8 rounded-3xl border border-emerald-500/30 space-y-5">
+          <div class="flex items-center justify-between border-b border-white/10 pb-3">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-400 uppercase">Module 04 • Grassroots Network</span>
+              <h3 class="text-xl font-bold text-white mt-1">CadreSync Broadcaster™</h3>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 text-xs font-bold">
+              Encrypted WhatsApp / SMS
+            </span>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div>
+              <label class="block font-bold text-slate-300 mb-1">Target Audience</label>
+              <select class="w-full form-input-custom p-2 rounded-xl text-xs">
+                <option>All Panna Pramukhs (2,400 Workers)</option>
+                <option>Booth Presidents Only (186 Leaders)</option>
+                <option>Youth Volunteer Brigade (850 Members)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-300 mb-1">Broadcast Message Template</label>
+              <textarea rows="3" class="w-full form-input-custom p-2.5 rounded-xl text-xs font-mono" readonly>Namaskar {Worker_Name}, this is our final push at Booth #{Booth_ID}. The voting queues close at 6:00 PM. Please verify that all families on Page 3 and 4 of your voter roll have cast their ballot. Victory is within 50 votes!</textarea>
+            </div>
+
+            <button onclick="simulateBroadcast()" class="btn-primary-green w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Simulate Broadcast to 2,400 Workers</span>
+            </button>
+            <div id="broadcast-result-box" class="text-center text-xs text-emerald-400 font-bold hidden">
+              ✓ Sent to 2,400 Panna Pramukhs with 99.2% delivery confirmation!
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#05110b] border-t border-emerald-500/20 py-10 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/logo.jpg" alt="Logo" class="w-7 h-7 rounded-full border border-emerald-400">
+        <span class="text-base font-bold text-white font-heading">CAPITANISSM</span>
+        <span class="text-slate-500">| Custom Political Software Suite</span>
+      </div>
+      <div>
+        © 2026 CAPITANISSM. All Rights Reserved. Sovereign Indian Election Infrastructure.
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-emerald-400">Home</a>
+        <a href="mla-consulting.html" class="hover:text-emerald-400">MLA Retainers</a>
+        <a href="apply.html" class="text-emerald-400 font-bold">Apply (18+)</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Teleprompter Logic
+    const tpBox = document.getElementById('teleprompter-box');
+    const playBtn = document.getElementById('tp-play-pause-btn');
+    const resetBtn = document.getElementById('tp-reset-btn');
+    const speedRange = document.getElementById('tp-speed-range');
+    const fontInc = document.getElementById('tp-font-inc');
+    const fontDec = document.getElementById('tp-font-dec');
+
+    let isScrolling = false;
+    let scrollInterval = null;
+    let fontSize = 20;
+
+    if (playBtn && tpBox) {
+      playBtn.addEventListener('click', () => {
+        if (!isScrolling) {
+          isScrolling = true;
+          playBtn.innerHTML = `<i class="fa-solid fa-pause"></i> <span>Pause Prompter</span>`;
+          playBtn.classList.replace('btn-primary-green', 'btn-coral');
+          const speed = parseInt(speedRange.value, 10);
+          scrollInterval = setInterval(() => {
+            tpBox.scrollTop += speed;
+          }, 40);
+        } else {
+          isScrolling = false;
+          playBtn.innerHTML = `<i class="fa-solid fa-play"></i> <span>Resume Prompter</span>`;
+          playBtn.classList.replace('btn-coral', 'btn-primary-green');
+          clearInterval(scrollInterval);
+        }
+      });
+
+      resetBtn.addEventListener('click', () => {
+        isScrolling = false;
+        clearInterval(scrollInterval);
+        tpBox.scrollTop = 0;
+        playBtn.innerHTML = `<i class="fa-solid fa-play"></i> <span>Start Auto-Scroll</span>`;
+        playBtn.classList.replace('btn-coral', 'btn-primary-green');
+      });
+
+      fontInc.addEventListener('click', () => {
+        fontSize = Math.min(32, fontSize + 2);
+        tpBox.style.fontSize = `${fontSize}px`;
+      });
+
+      fontDec.addEventListener('click', () => {
+        fontSize = Math.max(14, fontSize - 2);
+        tpBox.style.fontSize = `${fontSize}px`;
+      });
+    }
+
+    function simulateBroadcast() {
+      const box = document.getElementById('broadcast-result-box');
+      box.classList.remove('hidden');
+      setTimeout(() => {
+        box.classList.add('hidden');
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
+

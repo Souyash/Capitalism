@@ -1,0 +1,310 @@
+/* Capitanissm - Political Intelligence & Booth War-Rooms Theme */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --bg-deep: #07160f;
+  --bg-forest-900: #0a1f16;
+  --bg-forest-800: #0f2d20;
+  --bg-forest-700: #153e2d;
+  --brand-green: #10b981;
+  --brand-green-bright: #34d399;
+  --brand-green-dark: #065f46;
+  --brand-coral: #ff5252;
+  --brand-coral-light: #ff7575;
+  --brand-gold: #f59e0b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-glass: rgba(52, 211, 153, 0.18);
+  --border-glass-hover: rgba(52, 211, 153, 0.45);
+  --card-glass: rgba(15, 45, 32, 0.65);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 85% 60%, rgba(255, 82, 82, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.1) 0%, transparent 40%),
+    linear-gradient(to bottom, #07160f 0%, #0a1e16 50%, #06120c 100%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Grid Texture Overlay */
+.warroom-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(52, 211, 153, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(52, 211, 153, 0.04) 1px, transparent 1px);
+}
+
+/* Glassmorphic Panel */
+.glass-panel {
+  background: var(--card-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--border-glass-hover);
+  box-shadow: 0 15px 35px -5px rgba(16, 185, 129, 0.12);
+}
+
+/* Neon Glow Accents */
+.glow-green {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.4);
+}
+
+.glow-coral {
+  box-shadow: 0 0 25px -5px rgba(255, 82, 82, 0.4);
+}
+
+.glow-text-green {
+  text-shadow: 0 0 20px rgba(52, 211, 153, 0.5);
+}
+
+.glow-text-coral {
+  text-shadow: 0 0 20px rgba(255, 82, 82, 0.5);
+}
+
+/* Gradient Texts */
+.gradient-text-green {
+  background: linear-gradient(135deg, #a7f3d0 0%, #34d399 50%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-brand {
+  background: linear-gradient(135deg, #f1fdf6 0%, #34d399 50%, #ff5252 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-coral {
+  background: linear-gradient(135deg, #fca5a5 0%, #ff5252 60%, #e11d48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Floating animation */
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-float-subtle {
+  animation: floatLogo 6s ease-in-out infinite;
+}
+
+/* Pulse radar ring */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-radar {
+  animation: pulseRing 4s ease-in-out infinite;
+}
+
+/* Buttons */
+.btn-primary-green {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: 1px solid rgba(167, 243, 208, 0.3);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-primary-green:hover {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  box-shadow: 0 6px 25px rgba(52, 211, 153, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-coral {
+  background: linear-gradient(135deg, #ff5252 0%, #dc2626 100%);
+  color: #ffffff;
+  border: 1px solid rgba(254, 202, 202, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 82, 82, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-coral:hover {
+  background: linear-gradient(135deg, #ff7575 0%, #ef4444 100%);
+  box-shadow: 0 6px 25px rgba(255, 82, 82, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.btn-glass:hover {
+  background: rgba(52, 211, 153, 0.12);
+  border-color: var(--brand-green-bright);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07160f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #153e2d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Badge styling */
+.badge-prime {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.15), rgba(255, 82, 82, 0.15));
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+}
+
+.badge-green {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #34d399;
+}
+
+.badge-coral {
+  background: rgba(255, 82, 82, 0.12);
+  border: 1px solid rgba(255, 82, 82, 0.35);
+  color: #ff7575;
+}
+
+/* Form Styles */
+.form-input-custom {
+  background: rgba(10, 31, 22, 0.8);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.form-input-custom:focus {
+  outline: none;
+  border-color: #34d399;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.2);
+  background: rgba(15, 45, 32, 0.95);
+}
+
+/* Custom Checkbox/Radio */
+.custom-radio:checked {
+  background-color: #10b981;
+  border-color: #34d399;
+}
+
+/* Live Card Ribbon */
+.ribbon-diagonal {
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  transform: rotate(45deg);
+  width: 120px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 4px 0;
+  text-transform: uppercase;
+}
+
+
+
+/* Multi-page Navigation Active State */
+.nav-link-active {
+  color: #34d399 !important;
+  border-bottom: 2px solid #34d399;
+}
+
+/* Teleprompter Display Styles */
+.teleprompter-screen {
+  background: #020b06;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  font-family: 'Outfit', sans-serif;
+  color: #f8fafc;
+  line-height: 1.8;
+  height: 380px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.teleprompter-screen::-webkit-scrollbar {
+  width: 6px;
+}
+.teleprompter-screen::-webkit-scrollbar-thumb {
+  background: #10b981;
+}
+
+/* Dashboard Metric Card */
+.stat-card-gradient {
+  background: linear-gradient(135deg, rgba(15, 45, 32, 0.8) 0%, rgba(7, 22, 15, 0.9) 100%);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+/* Table styles */
+.warroom-table th {
+  background: rgba(10, 31, 22, 0.9);
+  color: #a7f3d0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 10px 14px;
+}
+
+.warroom-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 13px;
+}
+
+.warroom-table tr:hover td {
+  background: rgba(16, 185, 129, 0.06);
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Induction & Eligibility Portal | CAPITANISSM</title>
+  <meta name="description" content="Apply to join Capitanissm as a Prime Speech Analyst, Booth Intelligence Researcher, or MLA Political Consultant. 18+ criteria enforced.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              deep: '#07160f',
+              forest: '#0f2d20',
+              emerald: '#10b981',
+              bright: '#34d399',
+              coral: '#ff5252',
+              gold: '#f59e0b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen text-slate-100 warroom-grid relative">
+
+  <!-- TOP TICKER -->
+  <div class="bg-gradient-to-r from-emerald-950 via-forest to-emerald-950 border-b border-emerald-500/30 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-400/40 text-[10px] tracking-wide uppercase">Official Induction</span>
+        <span class="text-slate-300">Mandatory Criteria: 18+ Age • Min 12th Passed • Graduation for MLA Consultant</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300 text-[11px]">
+        <span class="text-amber-300 flex items-center gap-1"><i class="fa-solid fa-graduation-cap"></i> UPSC & WBCS Cadre Priority</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#07160f]/90 backdrop-blur-xl border-b border-emerald-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-emerald-400/80 shadow-[0_0_15px_rgba(16,185,129,0.3)] group-hover:scale-105 transition-transform">
+          <img src="assets/logo.jpg" alt="Capitanissm Logo" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-black tracking-wider text-white font-heading group-hover:text-emerald-300 transition-colors">
+            CAPITANISSM
+          </span>
+          <span class="block text-[10px] font-bold text-emerald-400/90 tracking-widest uppercase">
+            Membership Induction Portal
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold tracking-wide uppercase text-slate-300">
+        <a href="index.html" class="hover:text-emerald-400 transition-colors">Home</a>
+        <a href="speeches.html" class="hover:text-emerald-400 transition-colors">Speeches Data</a>
+        <a href="booth-intelligence.html" class="hover:text-emerald-400 transition-colors">Booth Intelligence</a>
+        <a href="software-suite.html" class="hover:text-emerald-400 transition-colors">Custom Software</a>
+        <a href="mla-consulting.html" class="hover:text-emerald-400 transition-colors text-amber-300">MLA Consulting</a>
+        <a href="prime-members.html" class="hover:text-emerald-400 transition-colors">UPSC / WBCS Cadre</a>
+        <a href="dashboard.html" class="hover:text-emerald-400 transition-colors">Cadre Portal</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <span class="px-3.5 py-1.5 rounded-xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-bold font-mono">
+          STATUS: OPEN
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- APPLICATION SECTION -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold text-emerald-400 tracking-widest uppercase px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/30">
+          Eligibility Verification Engine
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 font-heading">
+          Capitanissm Cadre Application
+        </h1>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">
+          Complete the form below. Our real-time validator evaluates your age (18+), education (12th passed min; Graduation for MLA Consultant), and civil service aspirant badge.
+        </p>
+      </div>
+
+      <div class="glass-panel p-6 sm:p-10 rounded-3xl border border-emerald-500/40 shadow-2xl relative">
+        
+        <!-- Live Evaluation Feedback Box -->
+        <div id="overall-eligibility-verdict" class="mb-8 p-4 rounded-xl bg-slate-900/80 border border-white/10 text-sm">
+          <!-- Populated by JS live -->
+        </div>
+
+        <form id="membership-application-form" class="space-y-6">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Full Name -->
+            <div>
+              <label for="applicant-name" class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-1.5">
+                Full Legal Name *
+              </label>
+              <input 
+                type="text" 
+                id="applicant-name" 
+                required 
+                placeholder="e.g., Soumya Mukherjee" 
+                class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm"
+              >
+            </div>
+
+            <!-- Phone / WhatsApp -->
+            <div>
+              <label for="applicant-phone" class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-1.5">
+                WhatsApp Phone Number *
+              </label>
+              <input 
+                type="tel" 
+                id="applicant-phone" 
+                required 
+                placeholder="e.g., +91 98765 43210" 
+                class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm"
+              >
+            </div>
+
+            <!-- Email Address -->
+            <div>
+              <label for="applicant-email" class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-1.5">
+                Email Address *
+              </label>
+              <input 
+                type="email" 
+                id="applicant-email" 
+                required 
+                placeholder="candidate@example.com" 
+                class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm"
+              >
+            </div>
+
+            <!-- District & State -->
+            <div>
+              <label for="applicant-district" class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-1.5">
+                Target District & Assembly Constituency *
+              </label>
+              <input 
+                type="text" 
+                id="applicant-district" 
+                required 
+                placeholder="e.g., Kolkata North / Howrah / Burdwan" 
+                class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm"
+              >
+            </div>
+
+          </div>
+
+          <!-- Strict Criteria Row: Age & Education -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/5">
+            
+            <!-- Age (18+ Mandatory) -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="applicant-age" class="block text-xs font-bold text-slate-300 uppercase tracking-wide">
+                  Age (Must be 18+) *
+                </label>
+                <div id="status-age" class="text-xs"></div>
+              </div>
+              <input 
+                type="number" 
+                id="applicant-age" 
+                required 
+                min="16" 
+                max="75" 
+                placeholder="e.g., 22" 
+                class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm"
+              >
+              <span class="text-[11px] text-slate-400 mt-1 block">Capitanissm strictly admits adult members (18 years or older).</span>
+            </div>
+
+            <!-- Education (12th Passed Minimum) -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="applicant-education" class="block text-xs font-bold text-slate-300 uppercase tracking-wide">
+                  Education Level *
+                </label>
+                <div id="status-edu" class="text-xs"></div>
+              </div>
+              <select id="applicant-education" required class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm">
+                <option value="">-- Select Highest Qualification --</option>
+                <option value="below-12th">Below 12th Standard (Ineligible)</option>
+                <option value="12th-passed">12th Standard Passed (Eligible for Cadre)</option>
+                <option value="graduate">Graduate (B.A, B.Sc, B.Tech, LL.B, etc.)</option>
+                <option value="post-graduate">Post-Graduate / Masters</option>
+                <option value="phd">Ph.D / Research Scholar</option>
+              </select>
+              <span class="text-[11px] text-slate-400 mt-1 block">Min 12th passed required. Graduation needed for MLA Consultant.</span>
+            </div>
+
+          </div>
+
+          <!-- Role Selection & Experience -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Desired Role -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="applicant-role" class="block text-xs font-bold text-slate-300 uppercase tracking-wide">
+                  Desired Vertical / Track *
+                </label>
+                <div id="status-role" class="text-xs"></div>
+              </div>
+              <select id="applicant-role" required class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm">
+                <option value="prime-cadre">Prime Field & Speech Data Researcher (12th Passed + 18+)</option>
+                <option value="mla-consultant">Political Consultant for MLA (Graduation / Experience Req.)</option>
+              </select>
+            </div>
+
+            <!-- Prior Campaign Experience -->
+            <div>
+              <label for="applicant-experience" class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-1.5">
+                Prior Political or Campaign Experience
+              </label>
+              <select id="applicant-experience" class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm">
+                <option value="fresher">Fresher / Eager to Learn (Full Training Provided)</option>
+                <option value="1-2-years">1 - 2 Years (Booth Survey, Media or Campaign)</option>
+                <option value="3-plus-years">3+ Years (Experienced Political Strategist)</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Aspirant Status (UPSC / WBCS / State PCS) & Communication -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Aspirant Category -->
+            <div>
+              <label for="applicant-aspirant" class="block text-xs font-bold text-amber-300 uppercase tracking-wide mb-1.5 flex items-center gap-1">
+                <i class="fa-solid fa-graduation-cap text-amber-400"></i>
+                <span>Competitive Exam Aspirant Category</span>
+              </label>
+              <select id="applicant-aspirant" class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm">
+                <option value="upsc">UPSC Civil Services Aspirant (Prime Cohort)</option>
+                <option value="wbcs">WBCS - West Bengal Civil Service Aspirant (Prime Cohort)</option>
+                <option value="state-pcs">State PCS (BPSC, UPPSC, JPSC, etc.)</option>
+                <option value="law-public-policy">Law / Public Administration / Pol Science Student</option>
+                <option value="general">Non-Aspirant / Grassroots Campaigner</option>
+              </select>
+              <div id="aspirant-badge-preview" class="mt-2"></div>
+            </div>
+
+            <!-- Communication Skill -->
+            <div>
+              <label for="applicant-communication" class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-1.5">
+                Communication Proficiency *
+              </label>
+              <select id="applicant-communication" required class="w-full form-input-custom px-4 py-2.5 rounded-xl text-sm">
+                <option value="excellent">Fluent Local Vernacular + Good Hindi / English (Recommended)</option>
+                <option value="good">Good Local Dialect Communication</option>
+                <option value="average">Moderate / Developing</option>
+                <option value="poor">Hesitant Public Speaker</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Statement of Motivation -->
+          <div>
+            <label for="applicant-statement" class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-1.5">
+              Why do you want to join Capitanissm?
+            </label>
+            <textarea 
+              id="applicant-statement" 
+              rows="3" 
+              placeholder="Tell us about your interest in speech analysis, booth mapping, or assisting political leadership..." 
+              class="w-full form-input-custom p-3 rounded-xl text-sm"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-xs text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-lock text-emerald-400"></i>
+              <span>All candidate data is handled under strict professional confidentiality.</span>
+            </div>
+
+            <button 
+              type="submit" 
+              id="btn-submit-application" 
+              class="w-full sm:w-auto btn-primary-green px-8 py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg"
+            >
+              <span>Submit & Generate Member ID Pass</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP PASS MODAL -->
+  <div id="membership-pass-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-panel max-w-lg w-full p-6 sm:p-8 rounded-3xl border border-emerald-400/50 shadow-2xl relative text-left animate-fadeIn">
+      
+      <button id="btn-close-pass-modal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-400/40 mb-2">
+          <i class="fa-solid fa-check-circle"></i> Application Pre-Approved & Logged
+        </div>
+        <h3 class="text-xl sm:text-2xl font-black text-white font-heading">
+          Capitanissm Provisional Member Pass
+        </h3>
+        <p class="text-xs text-slate-300 mt-1">
+          Your credentials match our induction criteria. Present this ID during your candidate orientation.
+        </p>
+      </div>
+
+      <!-- ID Card Visual -->
+      <div class="p-5 rounded-2xl bg-gradient-to-br from-[#0c3121] via-[#092217] to-[#04120c] border-2 border-emerald-400/60 shadow-xl relative overflow-hidden">
+        
+        <div class="absolute -right-10 -bottom-10 w-44 h-44 opacity-10 pointer-events-none">
+          <img src="assets/logo.jpg" alt="Watermark" class="w-full h-full object-cover rounded-full">
+        </div>
+
+        <div class="flex items-center justify-between border-b border-emerald-500/30 pb-3 mb-4">
+          <div class="flex items-center gap-2.5">
+            <img src="assets/logo.jpg" alt="Capitanissm" class="w-9 h-9 rounded-full border border-emerald-400 shadow-sm">
+            <div>
+              <span class="text-sm font-black text-white tracking-wider block font-heading">CAPITANISSM</span>
+              <span class="text-[9px] text-emerald-300 font-bold uppercase tracking-widest">Political Intelligence Unit</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <span class="text-[10px] text-slate-400 block font-mono">PASS ID</span>
+            <span id="pass-id-display" class="text-xs font-bold text-amber-400 font-mono">CPT-2026-8941</span>
+          </div>
+        </div>
+
+        <div class="space-y-2.5 text-xs">
+          <div>
+            <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Candidate Name:</span>
+            <span id="pass-name-display" class="text-base font-bold text-white tracking-wide">CANDIDATE</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 pt-1">
+            <div>
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Vertical / Role:</span>
+              <span id="pass-role-display" class="font-bold text-emerald-300 text-xs">Prime Speech Analyst</span>
+            </div>
+            <div>
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Aspirant Honors:</span>
+              <span id="pass-aspirant-display" class="font-bold text-amber-300 text-xs">UPSC Aspirant Cadre</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 pt-1 border-t border-emerald-500/20">
+            <div>
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Assigned District:</span>
+              <span id="pass-district-display" class="font-medium text-slate-200">KOLKATA NORTH</span>
+            </div>
+            <div>
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Issue Date:</span>
+              <span id="pass-date-display" class="font-medium text-slate-200 font-mono">24 OCT 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-emerald-500/20 flex items-center justify-between text-[10px] text-slate-400">
+          <span class="flex items-center gap-1 text-emerald-400"><i class="fa-solid fa-shield-halved"></i> 18+ Criteria Verified</span>
+          <span class="font-mono">STATUS: ACTIVE INDUCTION</span>
+        </div>
+
+      </div>
+
+      <div class="mt-6 flex items-center gap-3">
+        <button id="btn-print-pass" class="flex-1 btn-primary-green py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+          <i class="fa-solid fa-print"></i>
+          <span>Save / Print Pass</span>
+        </button>
+        <button onclick="document.getElementById('membership-pass-modal').classList.add('hidden')" class="btn-glass px-4 py-2.5 rounded-xl text-xs font-bold">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#05110b] border-t border-emerald-500/20 py-10 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/logo.jpg" alt="Logo" class="w-7 h-7 rounded-full border border-emerald-400">
+        <span class="text-base font-bold text-white font-heading">CAPITANISSM</span>
+        <span class="text-slate-500">| Induction Division</span>
+      </div>
+      <div>
+        © 2026 CAPITANISSM. All Rights Reserved. Strict 18+ Criteria.
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-emerald-400">Home</a>
+        <a href="mla-consulting.html" class="hover:text-emerald-400">MLA Retainers</a>
+        <a href="prime-members.html" class="text-emerald-400 font-bold">UPSC/WBCS Cadre</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+
